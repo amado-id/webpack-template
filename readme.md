@@ -2,7 +2,7 @@
 
 <h2>Как использовать:</h2>
 <ol>
-	<li>Установить <a href="https://nodejs.org">node.js</a></li>
+	<li>Установить <a target="_blank" href="https://nodejs.org">node.js</a></li>
 	<li><b>npm install</b> - пишем в консоль для установки нужных пакетов</li>
 	<li><b>npm run start</b> - пишем в консоль для запуска сборщика</li>
 </ol>
@@ -16,10 +16,10 @@
 <h2>Что есть в сборщике:</h2>
 <ol>
 	<li><b>sass</b> - css препроцессор. Более удобное написание стилей и расширение возможностей css (циклы, переменные и тп). 
-		<a href="https://sass-scss.ru/guide/">Документация</a>
+		<a target="_blank" href="https://sass-scss.ru/guide/">Документация</a>
 	</li>
 	<li><b>pug</b> - html шаблонизатор. Сокращение html разметки для лучшей читабельности, импорты и тп. 
-		<a href="https://pugjs.org/api/getting-started.html">Документация</a>
+		<a target="_blank" href="https://pugjs.org/api/getting-started.html">Документация</a>
 	</li>
-	<li><b>babel</b> - компилятор js кода для поддержки браузеров, которые не поддерживают новые стандарты (ES6 и тп)</li>
+	<li><b>babel</b> - транспайлер, переписывающий код на ES6 (ES-2015) в код, который поддерживают старые браузеры\версии браузеров.</li>
 </ol>
