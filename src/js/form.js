@@ -1,4 +1,4 @@
-import Form from '../libs/_validate.js'
+import Form from 'validate-form.js'
 
 document.addEventListener('DOMContentLoaded', function() {
 	if (document.querySelector('.form')) {

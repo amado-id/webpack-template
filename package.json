@@ -43,6 +43,7 @@
     "@babel/polyfill": "^7.8.7",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
-    "swiper": "^5.4.1"
+    "swiper": "^5.4.1",
+    "validate-form.js": "^1.0.0"
   }
 }
