@@ -12,6 +12,7 @@ function generateHtmlPlugins(templateDir) {
 		const parts = item.split('.')
 		const name = parts[0]
 		const extension = parts[1]
+
 		return new HtmlWebpackPlugin({
 			filename: `${name}.html`,
 			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
@@ -26,7 +27,7 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	entry: './js/index.js',
 	output: {
-		filename: 'js/bundle.js',
+		filename: 'js/scripts.min.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	devtool: "source-map",
@@ -34,7 +35,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				include: path.resolve(__dirname, 'src/js'),
+				// include: path.resolve(__dirname, 'src/js'),
 				use: {
 					loader: 'babel-loader',
 					options: {
@@ -91,15 +92,18 @@ module.exports = {
 			},
 			{
 				test: /\.pug$/,
-				loader: 'pug-loader',
-				query: { pretty: true }
+				loader: 'pug-loader'
 			}
 		]
 	},
 	plugins: [
 		new CopyPlugin({
 			patterns: [
-				{ from: 'images', to: 'images' },
+				{
+					from: 'images',
+					to: 'images',
+					noErrorOnMissing: true
+				},
 			],
 		}),
 		new MiniCssExtractPlugin({
