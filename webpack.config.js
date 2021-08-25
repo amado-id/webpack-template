@@ -30,13 +30,14 @@ module.exports = {
 		filename: 'js/scripts.min.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	stats: 'errors-warnings',
 	devtool: "source-map",
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				// include: path.resolve(__dirname, 'src/js'),
-				use: {
+				use: [{
 					loader: 'babel-loader',
 					options: {
 						presets: [
@@ -50,7 +51,9 @@ module.exports = {
 							]
 						]
 					}
-				}
+				},
+				{ loader: 'eslint-loader' }
+			]
 			},
 			{
 				test: /\.(sa|sc|c)ss$/i,

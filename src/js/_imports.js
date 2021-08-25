@@ -1,2 +1,2 @@
-import './slider.js'
-import './form.js'
+import './slider';
+import './form';
